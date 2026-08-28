@@ -1,32 +1,86 @@
-ORDEM DE CRIAÇÃO POREM TODOS OS COMPONENTES SERAO CRIADOS VIA JS
-criar 2 componentes section e colocar o id
-inserir as sections no main
-criar titulo h2 e inserir na section
-criar o form com id e inserir na section
-criar o input com id e placeholder e inserir no form
-criar o button com id e type=submit e inserir no form
-criar um ion-icon com name=add-outline e inserir no form
-criar ul com id e inserir na segunda section
-criar li com 3 class (list template hide), se for fazer com create somente uma class
-criar 1 span com class e inserir no li
-criar 2 ion-icon com name e class
-o primeiro com name=checkmark-outline e class=done-btn
-o segundo name=close-outline e class=remove-btn
+# ✅ To-Do_JS
 
-Com todos os componentes criados criar o sistema
-criar 2 funções addtask e addBtn
-a função addBtn deve ter um evento de click com um call-back e preventDefault e uma função addTask
-a função addBtn deve ser chama no script geral
+Uma aplicação de lista de tarefas desenvolvida para praticar **JavaScript, manipulação do DOM e eventos**, criando os elementos da interface dinamicamente através do JavaScript.
 
-a função addTask terá toda logica, se for usar o createElement(), deve criar o li, span, ion-icon dente desta função
+O projeto foi desenvolvido como parte dos meus estudos de **JavaScript antes de avançar para React**, com foco em transformar conceitos aprendidos em uma aplicação funcional.
 
-a primeira funcionalidade será de buscar o input com valor
+---
 
-se fizer com cloneNode criar remove, para remover as classes templade hide
+## 📸 Preview
 
-criar o botão de confirmar com um evento e usar classList.toggle('done')
+<p align="center">
+  <img src="preview.png" alt="Preview do To-Do_JS" width="700">
+</p>
 
-criar botão remover usando um evento e usar remove();
-inserir o li na ul com appendChild()
+---
 
-para finalizar limpar o input depois de inserido a tarefa
+## 🚀 Funcionalidades
+
+- ✅ Adicionar novas tarefas
+- ✅ Impedir o cadastro de tarefas vazias
+- ✅ Remover espaços desnecessários utilizando `trim()`
+- ✅ Marcar tarefas como concluídas
+- ✅ Desmarcar tarefas concluídas
+- ✅ Remover tarefas
+- ✅ Limpar o campo de entrada após adicionar uma tarefa
+- ✅ Criar elementos da interface dinamicamente com JavaScript
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **DOM API**
+- **Ionicons**
+
+---
+
+## 🧠 Conceitos praticados
+
+Este projeto foi desenvolvido com foco na prática de conceitos fundamentais de JavaScript e manipulação do DOM.
+
+### JavaScript
+
+- Variáveis e constantes
+- Funções
+- Condicionais
+- Eventos
+- `addEventListener()`
+- `preventDefault()`
+- `trim()`
+
+### Manipulação do DOM
+
+- `querySelector()`
+- `createElement()`
+- `setAttribute()`
+- `appendChild()`
+- `textContent`
+- `classList.add()`
+- `classList.remove()`
+- `classList.toggle()`
+- `parentNode`
+- `remove()`
+
+### Estrutura dinâmica
+
+A interface principal do projeto é criada pelo próprio JavaScript, incluindo:
+
+```text
+main
+├── section
+│   ├── h2
+│   └── form
+│       ├── input
+│       └── button
+│           └── ion-icon
+│
+└── section
+    ├── h2
+    └── ul
+        └── li
+            ├── span
+            ├── ion-icon
+            └── ion-icon
