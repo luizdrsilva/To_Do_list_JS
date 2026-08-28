@@ -9,7 +9,7 @@ O projeto foi desenvolvido como parte dos meus estudos de **JavaScript antes de 
 ## 📸 Preview
 
 <p align="center">
-  <img src="preview.png" alt="Preview do To-Do_JS" width="700">
+  <img src="images/preview.png" alt="Preview do To-Do_JS" width="700">
 </p>
 
 <p>Preview Site: <a href="https://to-do-list-js-one-orcin.vercel.app/">To Do List</a></p>
