@@ -1,0 +1,262 @@
+:root {
+    /* Fundo geral da página */
+    --cor-fundo-inicio: #11162D;
+    --cor-fundo-fim: #2B2A6B;
+
+    /* Áreas principais */
+    --cor-painel-principal: #1D2442;
+    --cor-fundo-tarefa: #1B223D;
+    --cor-fundo-input: #202744;
+
+    /* Botões */
+    --cor-botao-adicionar: #6258F2;
+    --cor-botao-adicionar-hover: #7168FF;
+    --cor-botao-concluir: #19B890;
+    --cor-botao-remover: #E83D4F;
+
+    /* Textos */
+    --cor-texto-principal: #F4F4F6;
+    --cor-texto-secundario: #A8ADC1;
+    --cor-texto-placeholder: #777F99;
+
+    /* Bordas */
+    --cor-borda-padrao: #303858;
+
+    /* Tarefa concluída */
+    --cor-tarefa-concluida: #29304D;
+    --cor-texto-tarefa-concluida: #858CA5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-top: 40px;
+    /* background: linear-gradient(to right, green, blue); */
+    background: linear-gradient(to right, var(--cor-fundo-inicio), var(--cor-fundo-fim));
+    /* background: linear-gradient(135deg,#11162D 0%,#1A1F46 45% ,#2B2A6B 100%); */
+}
+h1{
+    color: var(--cor-texto-principal);
+}
+.clipboard{
+    color: var(--cor-botao-adicionar);
+}
+.spanJS{
+    color: var(--cor-botao-adicionar);
+}
+.paragrafoTitle{
+    color: var(--cor-texto-secundario);
+    padding-top: 8px;
+}
+#list-main{
+    width: 500px;
+    margin: auto;
+    padding-top: 20px;
+
+    /* border: 1px solid black; */
+}
+/* Primeira Section */
+#add-task-form{
+    border: 1px solid var(--cor-borda-padrao);
+    width: 100%;
+    background: var(--cor-painel-principal);
+    height: 110px;
+    position: relative;
+    border-radius: 12px;
+
+    h2{
+        font-size: 20px;
+        color: var(--cor-texto-principal);
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 12px;
+        position: relative;
+    }
+    h2::after{
+        content: '';
+        position: absolute;
+        left: 12px;
+        bottom: -5px;
+        width: 55px;
+        border-bottom: 4px solid var(--cor-botao-adicionar);
+        border-radius: 25px;
+    }
+
+    #input-form{
+        width: 80%;
+        margin-top: 10px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--cor-borda-padrao);
+        padding-left: 12px;
+        position: absolute;
+        left: 10px;
+        bottom: 20px;
+        background-color: var(--cor-fundo-input);
+        color: var(--cor-texto-secundario);
+    }
+    
+    #input-form:focus{
+        outline: none;
+    }
+    #input-form::placeholder{
+        color: var(--cor-texto-secundario);
+        
+    }
+    #btn-form{
+        height: 40px;
+        width: 13%;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--cor-botao-adicionar);
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        cursor: pointer;
+    }
+    #btn-form:hover{
+        background-color: var(--cor-botao-adicionar-hover);
+    }
+    .btn-addOutline{
+        font-size:1.6em;
+        /* font-weight: bold; */
+        color: white;
+    }
+}
+/* Segunda Section */
+#list-tarefas{
+    border: 1px solid var(--cor-borda-padrao);
+    width: 100%;
+    margin-top: 10px;
+    background: var(--cor-painel-principal);
+    height: 100%;
+    position: relative;
+    border-radius: 12px;
+
+    h2{
+        font-size: 20px;
+        color: var(--cor-texto-principal);
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 12px;
+        position: relative;
+    }
+    h2::after{
+        content: '';
+        position: absolute;
+        left: 12px;
+        bottom: -5px;
+        width: 55px;
+        border-bottom: 4px solid var(--cor-botao-adicionar);
+        border-radius: 25px;
+    }
+    #list-Ul{
+        list-style: none;
+        margin-top: 10px;
+    }
+    .listLi{
+        background-color: var(--cor-fundo-tarefa);
+        border: 1px solid var(--cor-borda-padrao);
+        border-radius: 10px;
+        margin: auto;
+        width: 95%;
+        height: 50px;
+        margin-bottom: 10px;
+        padding-top: 15px;
+        text-align: left;
+        padding-left: 32px;
+        position: relative;
+    }
+    .spanLi{
+        color: var(--cor-texto-principal);
+        padding-left: 6px;
+    }
+    .spanLi::before{
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--cor-texto-secundario);
+    }
+    .btn-check{
+        position: absolute;
+        right: 50px;
+        top: 12px;
+        font-size: 1.3em;
+        background-color: var(--cor-botao-concluir);
+        padding: 2px;
+        border-radius: 50%;
+        color: var(--cor-texto-principal);
+        cursor: pointer;
+    }
+    .btn-check:hover{
+        background-color: #14886b;
+        transition: .5s;
+    }
+    .btn-close{
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        font-size: 1.2em;
+        background-color: var(--cor-botao-remover);
+        padding: 3px;
+        border-radius: 8px;
+        color: var(--cor-texto-principal);
+        cursor: pointer;
+    }
+    .btn-close:hover{
+        background-color: #9c212d;
+    }
+
+    .done{
+        text-decoration: line-through;
+        background-color: var(--cor-tarefa-concluida);
+        color: var(--cor-texto-tarefa-concluida);
+
+        .btn-check{
+            background-color: var(--cor-texto-tarefa-concluida);
+            color: var(--cor-texto-principal);
+        }
+
+        .spanLi{
+            padding-left: 6px;
+        }
+
+        .spanLi::before{
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(19, 177, 19);
+        }
+        .spanLi::after{
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 19px;
+            box-sizing: border-box;
+            width: 12px;
+            height: 8px;
+            transform: rotate(-45deg);
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+        } 
+    }
+
+}
